@@ -1,0 +1,33 @@
+<%- include('./partials/_headerNav.ejs', title )  %> 
+
+<div style="margin-top: 80px;" class="d-flex flex-column align-items-center">
+    <section class="w-50">
+        <h1 style="font-weight: lighter;" class="mb-4">
+            <small>Empieza a guardar tus contactos</small>
+        </h1>
+        
+        
+        <%- include('./partials/_form.ejs', {
+            _id : '',
+            name: '',
+            tel: '',
+            email: '',
+            textButton: 'Guardar',
+            route: '/add',
+            typeButton: 'btn-primary'
+        })  %> 
+    </section>
+</div>
+
+<main style="margin-bottom: 90px;" class="container mt-5">
+   <div class="row d-flex justify-content-center">
+
+        <% contacts.forEach(c => {%>
+            <%- include('./partials/_card.ejs', c)  %> 
+        <% }) %> 
+      
+   </div>
+</main>
+
+<%- include('./partials/_footer.ejs')  %> 
+

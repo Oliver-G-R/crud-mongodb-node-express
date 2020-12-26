@@ -1,0 +1,28 @@
+<%- include('./partials/_headerNav.ejs', title)  %> 
+
+<div style="margin-top: 80px;" class="d-flex flex-column align-items-center">
+    <section class="w-50">
+        <h1 style="font-weight: lighter;" class="mb-4">
+            <small>Edita tu contacto</small>
+        </h1>
+
+        <% const  { _id , name, tel , email } = currentContact  %> 
+        
+        <%- include('./partials/_form.ejs', {
+            _id : _id,
+            name: name,
+            tel: tel,
+            email: email,
+            textButton: 'Editando',
+            route: `/update${_id}`,
+            typeButton: 'btn-warning'
+        })  %> 
+    </section>
+</div>
+
+<section class="d-flex justify-content-center">
+    <%- include('./partials/_card.ejs', currentContact)  %> 
+</section>
+
+<%- include('./partials/_footer.ejs')  %> 
+

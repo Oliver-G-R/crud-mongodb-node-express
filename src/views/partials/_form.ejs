@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="card-body">
+        <form action="<%= route  %>" method="POST">
+            <div class="form-group mb-3">
+                <input 
+                       class="form-control"
+                       type="text" 
+                       value="<%= name %>"
+                       name="name" 
+                       placeholder="Nombre">
+            </div>
+            <div class="form-group mb-3">
+                <input 
+                       class="form-control"
+                       type="tel" 
+                       value="<%= tel %>"
+                       name="tel" 
+                       placeholder="+542564789563">
+            </div>
+            <div class="form-group mb-3">
+                <input 
+                       class="form-control"
+                       type="email" 
+                       name="email" 
+                       value="<%= email %>"
+                       placeholder="example@mail.com">
+            </div>
+
+            <button type="submit" class="btn <%= typeButton  %>   text-light w-100">
+                <%= textButton %> 
+            </button>
+        </form>
+    </div>
+</div>
